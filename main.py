@@ -18,6 +18,10 @@ def index():
     return render_template('base.html', title='Главная страница')
 
 
+@login_manager.user_loader
+def load_user(user_id):
+    pass
+
 
 
 if __name__ == "__main__":
