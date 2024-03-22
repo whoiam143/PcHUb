@@ -1,3 +1,7 @@
-h1{
-    color: red;
+.navbar-brand{
+    font-size: 25px;
+    margin-left: 2%;
+}
+.foot{
+    margin-bottom: 0px;
 }
