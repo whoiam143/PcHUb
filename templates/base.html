@@ -15,7 +15,12 @@
     <nav class="navbar navbar-light bg-light">
         <a class="navbar-brand" href="/">PC-hub</a>
         {% if current_user.is_authenticated %}
+        <div style="display: flex; align-items: center;">
+          <nobr>
+          <a href="/add_configuration" class="btn btn-secondary" style="margin-right: 0.5rem;">Добавить конфигурцию</a>
+          </nobr>
           <a class="navbar-brand" href="/logout">{{ current_user.username }}</a>
+        </div>
         {% else %}
         <p class="regblock">
           <a class="btn btn-primary" href="/register">Зарегистрироваться</a>
@@ -25,11 +30,11 @@
     </nav>
 </header>
     <!-- Main body-->
-    <main role="main" class="container">
+    <main role="main" class="container", style="margin-bottom: 5rem;">
       {% block content %}{% endblock %}
     </main>
 
-    <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 border-top fixed-bottom foot">
+    <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 border-top fixed-bottom foot", style="position: fixed; background-color: white;">
     <p class="col-md-4 mb-0 text-muted">© 2024 Fun made project</p>
 
     <a href="/" class="col-md-4 d-flex align-items-center justify-content-center mb-3 mb-md-0 me-md-auto link-dark text-decoration-none">

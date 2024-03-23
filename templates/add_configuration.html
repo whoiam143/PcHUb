@@ -1,0 +1,134 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h1 class="site-header">Добавление кофигурации</h1>
+<form action="" method="post">
+    {{ form.hidden_tag() }}
+    <p>
+        {{ form.cpu.label }}<br>
+        {{ form.cpu(class="form-control") }}<br>
+        {% for error in form.cpu.errors %}
+            <p class="alert alert-danger" role="alert">
+                {{ error }}
+            </p>
+        {% endfor %}
+        {{ form.cpu_link(class="form-control") }}<br>
+        {% for error in form.cpu_link.errors %}
+            <p class="alert alert-danger" role="alert">
+                {{ error }}
+            </p>
+        {% endfor %}
+    </p>
+    <p>
+        {{ form.gpu.label }}<br>
+        {{ form.gpu(class="form-control") }}<br>
+        {% for error in form.gpu.errors %}
+            <p class="alert alert-danger" role="alert">
+                {{ error }}
+            </p>
+        {% endfor %}
+        {{ form.gpu_link(class="form-control") }}<br>
+        {% for error in form.gpu_link.errors %}
+            <p class="alert alert-danger" role="alert">
+                {{ error }}
+            </p>
+        {% endfor %}
+    </p>
+    <p>
+        {{ form.ram.label }}<br>
+        {{ form.ram(class="form-control") }}<br>
+        {% for error in form.ram.errors %}
+            <p class="alert alert-danger" role="alert">
+                {{ error }}
+            </p>
+        {% endfor %}
+        {{ form.ram_link(class="form-control") }}<br>
+        {% for error in form.ram_link.errors %}
+            <p class="alert alert-danger" role="alert">
+                {{ error }}
+            </p>
+        {% endfor %}
+    </p>
+    <p>
+        {{ form.motherboard.label }}<br>
+        {{ form.motherboard(class="form-control") }}<br>
+        {% for error in form.motherboard.errors %}
+            <p class="alert alert-danger" role="alert">
+                {{ error }}
+            </p>
+        {% endfor %}
+        {{ form.motherboard_link(class="form-control") }}<br>
+        {% for error in form.motherboard_link.errors %}
+            <p class="alert alert-danger" role="alert">
+                {{ error }}
+            </p>
+        {% endfor %}
+    </p>
+    <p>
+        {{ form.ssd.label }}<br>
+        {{ form.ssd(class="form-control") }}<br>
+        {% for error in form.ssd.errors %}
+            <p class="alert alert-danger" role="alert">
+                {{ error }}
+            </p>
+        {% endfor %}
+        {{ form.ssd_link(class="form-control") }}<br>
+        {% for error in form.ssd_link.errors %}
+            <p class="alert alert-danger" role="alert">
+                {{ error }}
+            </p>
+        {% endfor %}
+    </p>
+    <p>
+        {{ form.frame.label }}<br>
+        {{ form.frame(class="form-control") }}<br>
+        {% for error in form.frame.errors %}
+            <p class="alert alert-danger" role="alert">
+                {{ error }}
+            </p>
+        {% endfor %}
+        {{ form.frame_link(class="form-control") }}<br>
+        {% for error in form.frame_link.errors %}
+            <p class="alert alert-danger" role="alert">
+                {{ error }}
+            </p>
+        {% endfor %}
+    </p>
+    <p>
+        {{ form.cooler.label }}<br>
+        {{ form.cooler(class="form-control") }}<br>
+        {% for error in form.cooler.errors %}
+            <p class="alert alert-danger" role="alert">
+                {{ error }}
+            </p>
+        {% endfor %}
+        {{ form.cooler_link(class="form-control") }}<br>
+        {% for error in form.cooler_link.errors %}
+            <p class="alert alert-danger" role="alert">
+                {{ error }}
+            </p>
+        {% endfor %}
+    </p>
+    <p>
+        {{ form.power.label}}<br>
+        {{ form.power(class="form-control") }}<br>
+        {% for error in form.power.errors %}
+            <p class="alert alert-danger" role="alert">
+                {{ error }}
+            </p>
+        {% endfor %}
+        {{ form.power_link(class="form-control") }}<br>
+        {% for error in form.power_link.errors %}
+            <p class="alert alert-danger" role="alert">
+                {{ error }}
+            </p>
+        {% endfor %}
+    </p>
+    <p>
+        {{ form.comment.label}}<br>
+        {{ form.comment(class="form-control") }}<br>
+    </p>
+    <p>{{ form.submit(type="submit", class="btn btn-primary") }}</p>
+    {{message}}
+</form>
+{% endblock %}

@@ -3,7 +3,9 @@ from data import db_session
 from flask_login import login_user, LoginManager, login_required, logout_user
 from forms.user import RegisterForm, LoginForm
 from data.users import User
-from flask_login import LoginManager
+from data.configurations import Configuration
+from forms.configuration import AddConfigurationForm
+from flask_login import LoginManager, current_user
 
 
 app = Flask(__name__)
@@ -20,6 +22,46 @@ def main():
 @app.route('/')
 def index():
     return render_template('index.html', title='Главная страница')
+
+
+@app.route('/add_configuration', methods=['GET', 'POST'])
+@login_required
+def add_configuration():
+    form = AddConfigurationForm()
+    if form.validate_on_submit():
+        db_sess = db_session.create_session()
+        config = Configuration(
+            cooler=form.cooler.data,
+            cooler_link=form.cooler_link.data,
+            
+            ram=form.cooler.data,
+            ram_link=form.cooler_link.data,
+            
+            cpu=form.cooler.data,
+            cpu_link=form.cooler_link.data,
+            
+            frame=form.cooler.data,
+            frame_link=form.cooler_link.data,
+            
+            ssd=form.cooler.data,
+            ssd_link=form.cooler_link.data,
+
+            power=form.cooler.data,
+            power_link=form.cooler_link.data,
+            
+            motherboard=form.cooler.data,
+            motherboard_link=form.cooler_link.data,
+            
+            gpu=form.cooler.data,
+            gpu_link=form.cooler_link.data,
+            
+            comment=form.comment.data
+        )
+        current_user.configurations.append(config)
+        db_sess.merge(current_user)
+        db_sess.commit()
+        return redirect('/')
+    return render_template('add_configuration.html', title='Добавление кофигурации', form=form)
 
 
 @app.route('/register', methods=['GET', 'POST'])
