@@ -14,12 +14,22 @@
 <header>
     <nav class="navbar navbar-light bg-light">
         <a class="navbar-brand" href="/">PC-hub</a>
+        {% if current_user.is_authenticated %}
+          <a class="navbar-brand" href="/logout">{{ current_user.username }}</a>
+        {% else %}
+        <p class="regblock">
+          <a class="btn btn-primary" href="/register">Зарегистрироваться</a>
+          <a class="btn btn-success" href="/login">Войти</a>
+        </p>
+{% endif %}
     </nav>
 </header>
     <!-- Main body-->
     <main role="main" class="container">
-        <!--{% block content %}{% endblock %}-->
-
+        <div, class="text-center">
+            {% block content %}{% endblock %}
+        </div>
+    </main>
 
     <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 border-top fixed-bottom foot">
     <p class="col-md-4 mb-0 text-muted">© 2024 Fun made project</p>
@@ -36,6 +46,5 @@
       <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">About</a></li>
     </ul>
   </footer>
-</main>
 </body>
 </html>
