@@ -4,6 +4,8 @@ from wtforms.validators import DataRequired
 
 
 class AddConfigurationForm(FlaskForm):
+    name = StringField("Название сборки", validators=[DataRequired()], render_kw={"placeholder": 'Имя сборки'})
+    
     cpu = StringField('Процессор', validators=[DataRequired()], render_kw={"placeholder": 'Название процессора'})
     cpu_link = URLField('', render_kw={"placeholder": 'Ссылка на процессор'})
 

@@ -1,5 +1,18 @@
 {% extends "base.html" %}
 
 {% block content %}
-    <h1>Это главная страница!</h1>
+    <h1>Топ сборок!</h1>
+    {% for item in configurations%}
+<div class="col-md6 border rounded" style="margin-top: 2rem;">
+    <h2>{{item.name}}</h2>
+    <div>
+        <span style="display:inline;">CPU: </span><span>{{item.cpu}}</span>
+        <br>
+        <span style="display:inline;">GPU: </span><span>{{item.gpu}}</span>
+    </div>
+    <div>
+        Автор - {{item.user.username}}
+    </div>
+</div>
+{% endfor %}
 {% endblock %}

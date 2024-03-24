@@ -21,7 +21,9 @@ def main():
 
 @app.route('/')
 def index():
-    return render_template('index.html', title='Главная страница')
+    db_sess = db_session.create_session()
+    configurations = db_sess.query(Configuration)
+    return render_template('index.html', title='Главная страница', configurations=configurations)
 
 
 @app.route('/add_configuration', methods=['GET', 'POST'])
@@ -31,29 +33,31 @@ def add_configuration():
     if form.validate_on_submit():
         db_sess = db_session.create_session()
         config = Configuration(
+            name=form.name.data,
+            
             cooler=form.cooler.data,
             cooler_link=form.cooler_link.data,
             
-            ram=form.cooler.data,
-            ram_link=form.cooler_link.data,
+            ram=form.ram.data,
+            ram_link=form.ram_link.data,
             
-            cpu=form.cooler.data,
-            cpu_link=form.cooler_link.data,
+            cpu=form.cpu.data,
+            cpu_link=form.cpu_link.data,
             
-            frame=form.cooler.data,
-            frame_link=form.cooler_link.data,
+            frame=form.frame.data,
+            frame_link=form.frame_link.data,
             
-            ssd=form.cooler.data,
-            ssd_link=form.cooler_link.data,
+            ssd=form.ssd.data,
+            ssd_link=form.ssd_link.data,
 
-            power=form.cooler.data,
-            power_link=form.cooler_link.data,
+            power=form.power.data,
+            power_link=form.power_link.data,
             
-            motherboard=form.cooler.data,
-            motherboard_link=form.cooler_link.data,
+            motherboard=form.motherboard.data,
+            motherboard_link=form.motherboard_link.data,
             
-            gpu=form.cooler.data,
-            gpu_link=form.cooler_link.data,
+            gpu=form.gpu.data,
+            gpu_link=form.gpu_link.data,
             
             comment=form.comment.data
         )

@@ -9,6 +9,8 @@ class Configuration(SqlAlchemyBase):
 
 
     id = sqlalchemy.Column(sqlalchemy.Integer, primary_key=True, autoincrement=True)
+    
+    name = sqlalchemy.Column(sqlalchemy.String, nullable=False)
 
     #Кулер
     cooler = sqlalchemy.Column(sqlalchemy.String, nullable=False)
