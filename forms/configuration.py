@@ -6,6 +6,9 @@ from wtforms.validators import DataRequired
 class AddConfigurationForm(FlaskForm):
     name = StringField("Название сборки", validators=[DataRequired()], render_kw={"placeholder": 'Имя сборки'})
     
+    about = TextAreaField('Описание', render_kw={'style': 'min-height: 150px',
+                                                              "placeholder": 'Здесь вы можете описать вашу сборку, для каких целей она и сколько FPS в играх'})
+    
     cpu = StringField('Процессор', validators=[DataRequired()], render_kw={"placeholder": 'Название процессора'})
     cpu_link = URLField('', render_kw={"placeholder": 'Ссылка на процессор'})
 

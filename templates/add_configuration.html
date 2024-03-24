@@ -14,6 +14,10 @@
         {% endfor %}
     </p>
     <p>
+        {{ form.about.label}}<br>
+        {{ form.about(class="form-control") }}<br>
+    </p>
+    <p>
         {{ form.cpu.label }}<br>
         {{ form.cpu(class="form-control") }}<br>
         {% for error in form.cpu.errors %}
