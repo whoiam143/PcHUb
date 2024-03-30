@@ -1,18 +1,94 @@
-{% extends "base.html" %}
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="https://fonts.googleapis.com/css?family=Montserrat:regular, 500,600,700,900" rel="stylesheet"/>
+        <link rel="stylesheet" href="../static/css/style.css">
+        <title>PcHub</title>
+    </head>
+    <body>
+        <div class="wrapper">
+            <header class="header">
+                <div class="header__container _container">
+                    <a href="" class="header__logo">
+                        PcHub
+                    </a>
+                    <nav class="header__menu menu">
+                        <ul class="menu__list">
+                                {% if current_user.is_authenticated %}
 
-{% block content %}
-    <h1>Топ сборок!</h1>
-    {% for item in configurations%}
-<div class="col-md6 border rounded" style="margin-top: 2rem;">
-    <h2>{{item.name}}</h2>
-    <div>
-        <span style="display:inline;">CPU: </span><span>{{item.cpu}}</span>
-        <br>
-        <span style="display:inline;">GPU: </span><span>{{item.gpu}}</span>
-    </div>
-    <div>
-        Автор - {{item.user.username}}
-    </div>
-</div>
-{% endfor %}
-{% endblock %}
+                                <li class="menu__item" style="margin-left: 15rem;">
+                                    <a class="menu__link" href="/logout">Профиль</a>
+                                </li>
+                                {% else %}
+                                <li class="menu__item" style="margin-left: 5rem;">
+                                    <a class="menu__link" href="/register">Зарегистрироваться</a>
+                                </li>
+                                <li class="menu__item">
+                                    <a class="menu__link" href="/login">Войти</a>
+                                </li>
+                                {% endif %}
+                            <li class="menu__item">
+                                <a href="" class="menu__link">Конфигурации</a>
+                            </li>
+                            <li class="menu__item">
+                                <a href="" class="menu__link">Контакты</a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            </header>
+            <main class="page">
+                <div class="page__main-block main-block">
+                    <div class="main-block__container _container">
+                        <div class="main-block__body">
+                            <h1 class="main-block__title">Не трать время на подбор комплектующих!</h1>
+                            <div class="main-block__text">
+                                Мы знаем, что такое подбирать конфигурацию и мучиться в сомнениях.
+                            </div>
+                            <div class="main-block__buttons">
+                                <a href="" class="main-block__button">Выбрать конфиг</a>
+                                <a href="" class="main-block__button main-block__button_border">Связаться</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="main-block__image _ibg">
+                        <img src="static/img/phon.jpg" alt="cover">
+                    </div>
+                </div>
+                <section class="page__services services">
+                    <div class="services__conrainer _container">
+                        <div class="services__body">
+                            <div class="services__column">
+                                <div class="services__item item-service">
+                                    <div class="item-service__icon"><img src="static/img/time.svg"></div>
+                                    <h3 class="item-service__title">Сэкономь время</h3>
+                                    <div class="item-service__text">Не нужно тратить время на подбор, просмотр видeo популярных ютуберов, сравнение и аналитику цен на комплектующие.</div>
+                                </div>
+                            </div>
+                            <div class="services__column">
+                                <div class="services__item item-service">
+                                    <div class="item-service__icon"><img src="static/img/rub.svg"></div>
+                                    <h3 class="item-service__title">Экономия денег</h3>
+                                    <div class="item-service__text">Больше не нужно обращаться к профессионалам и "специалистам" из магазина на 3 буквы.</div>
+                                </div>
+                            </div>
+                            <div class="services__column">
+                                <div class="services__item item-service">
+                                    <div class="item-service__icon"><img src="static/img/fire.svg"></div>
+                                    <h3 class="item-service__title">Идеальные сборки</h3>
+                                    <div class="item-service__text">Максимальная производительность в играх и рабочих задачах по их цене</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </main>
+            <footer class="footer footer">
+                ya podval
+            </footer>
+        </div>
+        <script src="/js/main.js"></script>
+    </body>
+</html>
