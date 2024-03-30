@@ -18,11 +18,11 @@
                         <ul class="menu__list">
                                 {% if current_user.is_authenticated %}
 
-                                <li class="menu__item" style="margin-left: 15rem;">
+                                <li class="menu__item" style="margin-left: 10rem;">
                                     <a class="menu__link" href="/logout">Профиль</a>
                                 </li>
                                 {% else %}
-                                <li class="menu__item" style="margin-left: 5rem;">
+                                <li class="menu__item" >
                                     <a class="menu__link" href="/register">Зарегистрироваться</a>
                                 </li>
                                 <li class="menu__item">

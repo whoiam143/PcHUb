@@ -29,7 +29,7 @@ body {
 }
 
 ._container{
-    max-width: 80%;
+    max-width: 1046px;
     margin: 0px auto;
     padding: 0px 25px;
     box-sizing: content-box;
