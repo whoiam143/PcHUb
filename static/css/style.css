@@ -11,7 +11,6 @@ a {
     text-decoration: none;
 }
 
-
 html,
 body {
     height: 100%;
@@ -29,7 +28,7 @@ body {
 }
 
 ._container{
-    max-width: 1046px;
+    max-width: 1024px;
     margin: 0px auto;
     padding: 0px 25px;
     box-sizing: content-box;
@@ -85,13 +84,13 @@ body {
 }
 
 .menu{
-    padding 5px 0;
+    padding 5px;
 }
 
 .menu__list{
     display: flex;
     list-style-type: none;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
 }
 
 .menu__link {
@@ -130,7 +129,7 @@ body {
 }
 
 .main-block__body{
-    padding: 185px 0px 191px 0px;
+    padding: 185px 0px 191px 0px;    flex-wrap: nowrap;
     position: relative;
     z-index: 2;
 }
@@ -237,4 +236,12 @@ body {
     line-height: 142%
 }
 
-
+ul.menu__list li {
+    display: inline; /* Отображать как строчный элемент */
+    margin-right: 5px; /* Отступ слева */
+    padding: 3px; /* Поля вокруг текста */
+}
+.menu__list li {
+    list-style: none;
+    display: inline-block;
+  }

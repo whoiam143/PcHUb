@@ -18,7 +18,7 @@ a {
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    background: url("/home/whoiam/PY/test/pic/2.jpg") no-repeat;
+    background: url("/static/img/2.jpg") no-repeat;
     background-size: cover;
     background-position: center;
 }
