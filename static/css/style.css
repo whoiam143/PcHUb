@@ -85,13 +85,13 @@ body {
 }
 
 .menu{
-    padding 5px;
+    padding 5px 0;
 }
 
 .menu__list{
     display: flex;
     list-style-type: none;
-    flex-wrap: nowrap;
+    flex-wrap: wrap;
 }
 
 .menu__link {
@@ -130,7 +130,7 @@ body {
 }
 
 .main-block__body{
-    padding: 185px 0px 191px 0px;    flex-wrap: nowrap;
+    padding: 185px 0px 191px 0px;
     position: relative;
     z-index: 2;
 }
@@ -237,12 +237,4 @@ body {
     line-height: 142%
 }
 
-ul.menu__list li {
-    display: inline; /* Отображать как строчный элемент */
-    margin-right: 5px; /* Отступ слева */
-    padding: 3px; /* Поля вокруг текста */
-}
-.menu__list li {
-    list-style: none;
-    display: inline-block;
-  }
+
