@@ -33,22 +33,43 @@
         </header>
         <main class="main">
             <div class="wrapper">
-                    <form action="">
+                    <form action=""  method="post">
+                        {{ form.hidden_tag() }}
                         <h1>Регистрация</h1>
                         <div class="input-box">
-                            <input type="text" placeholder="Имя" required>
+                            {{ form.username(class="form-control") }}<br>
+                            {% for error in form.username.errors %}
+                                <p class="alert alert-danger" role="alert">
+                                    {{ error }}
+                                </p>
+                            {% endfor %}
                         </div>
-                        <div class="input-box">
-                            <input type="email" placeholder="Почта" required>
+                        <div class="form-control input-box">
+                            {{ form.email(class="form-control") }}<br>
+                            {% for error in form.email.errors %}
+                                <p class="alert alert-danger" role="alert">
+                                    {{ error }}
+                                </p>
+                            {% endfor %}
                         </div>
-                        <div class="input-box">
-                            <input type="email" placeholder="Повторите почту" required>
+                        <div class="input-box form-control">
+                            {{ form.password(class="form-control") }}<br>
+                            {% for error in form.password.errors %}
+                                <p class="alert alert-danger" role="alert">
+                                    {{ error }}
+                                </p>
+                            {% endfor %}
                         </div>
-                        <div class="input-box">
-                            <input type="password" placeholder="Пароль" required>
+                        <div class="input-box form-control">
+                            {{ form.password_again(class="form-control") }}<br>
+                            {% for error in form.password_again.errors %}
+                                <p class="alert alert-danger" role="alert">
+                                    {{ error }}
+                                </p>
+                            {% endfor %}
                         </div>
-
-                        <button type="submit" class="btn">Зарегистрироваться</button>
+                        {{ form.submit(type="submit", class="btn btn-primary") }}
+                        {{message}}
                     </form>
             </div>
         </main>

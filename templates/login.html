@@ -33,19 +33,31 @@
         </header>
         <main class="main">
             <div class="wrapper">
-                    <form action="">
+                    <form action="" method="post">
+                        {{ form.hidden_tag() }}
                         <h1>Вход</h1>
                         <div class="input-box">
-                            <input type="email" placeholder="Почта" required>
+                            {{ form.email(class="form-control", type="email") }}<br>
+                            {% for error in form.email.errors %}
+                                <div class="alert alert-danger" role="alert">
+                                    {{ error }}
+                                </div>
+                            {% endfor %}
                         </div>
                         <div class="input-box">
-                            <input type="password" placeholder="Пароль" required>
+                            {{ form.password(class="form-control", type="password") }}<br>
+                            {% for error in form.password.errors %}
+                                <div class="alert alert-danger" role="alert">
+                                    {{ error }}
+                                </div>
+                            {% endfor %}
                         </div>
 
                         <div class="remember-forgot">
-                            <label><input type="checkbox">Запомнить меня</label>
+                            <p>{{ form.remember_me() }} {{ form.remember_me.label }}</p>
                         </div>
-                        <button type="submit" class="btn">Войти</button>
+                        <p>{{ form.submit(type="submit", class="btn btn-primary") }}</p>
+                        <div>{{ message }}</div>
 
                         <div class="register-link">
                             <p>Ещё не зарегистирированы?</p>

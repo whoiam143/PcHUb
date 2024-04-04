@@ -72,6 +72,7 @@ def add_configuration():
 def reqister():
     form = RegisterForm()
     if form.validate_on_submit():
+        print(123)
         if form.password.data != form.password_again.data:
             return render_template('register.html', title='Регистрация',
                                    form=form,
