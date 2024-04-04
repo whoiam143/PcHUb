@@ -18,7 +18,10 @@
                         <ul class="menu__list">
                                 {% if current_user.is_authenticated %}
                                 <li class="menu__item" style="margin-left: 15rem;">
-                                    <a class="menu__link" href="/logout">Профиль</a>
+                                    <a class="menu__link" href="">Профиль</a>
+                                </li>
+                                <li class="menu__item">
+                                    <a class="menu__link" href="/logout">Выход</a>
                                 </li>
                                 {% else %}
                                 <li class="menu__item" style="margin-left: 5rem;">
