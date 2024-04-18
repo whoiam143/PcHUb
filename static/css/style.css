@@ -430,7 +430,6 @@ ul.menu__list li {
 .catalog__item {
   width: 100%;
   margin-bottom: 90px;
-  padding: 15px 0 0 35px;
   position: relative;
   display: flex;
   justify-content: space-evenly;
@@ -509,7 +508,7 @@ ul.menu__list li {
   flex-direction: column;
   max-width: 500px;
   max-height: 500px;
-  padding: 300;
+
 }
 
 .product__img {
