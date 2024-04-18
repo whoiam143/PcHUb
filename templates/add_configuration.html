@@ -31,6 +31,12 @@
                 {{ error }}
             </p>
         {% endfor %}
+        {{ form.cpu_price(class="form-control") }}<br>
+        {% for error in form.cpu_price.errors %}
+        <p class="alert alert-danger" role="alert">
+            {{ error }}
+        </p>
+        {% endfor %}
     </p>
     <p>
         {{ form.gpu.label }}<br>
@@ -45,6 +51,12 @@
             <p class="alert alert-danger" role="alert">
                 {{ error }}
             </p>
+        {% endfor %}
+        {{ form.gpu_price(class="form-control") }}<br>
+        {% for error in form.gpu_price.errors %}
+        <p class="alert alert-danger" role="alert">
+            {{ error }}
+        </p>
         {% endfor %}
     </p>
     <p>
@@ -61,6 +73,12 @@
                 {{ error }}
             </p>
         {% endfor %}
+        {{ form.ram_price(class="form-control") }}<br>
+        {% for error in form.ram_price.errors %}
+        <p class="alert alert-danger" role="alert">
+            {{ error }}
+        </p>
+        {% endfor %}
     </p>
     <p>
         {{ form.motherboard.label }}<br>
@@ -75,6 +93,12 @@
             <p class="alert alert-danger" role="alert">
                 {{ error }}
             </p>
+        {% endfor %}
+        {{ form.motherboard_price(class="form-control") }}<br>
+        {% for error in form.motherboard_price.errors %}
+        <p class="alert alert-danger" role="alert">
+            {{ error }}
+        </p>
         {% endfor %}
     </p>
     <p>
@@ -91,6 +115,12 @@
                 {{ error }}
             </p>
         {% endfor %}
+        {{ form.ssd_price(class="form-control") }}<br>
+        {% for error in form.ssd_price.errors %}
+        <p class="alert alert-danger" role="alert">
+            {{ error }}
+        </p>
+        {% endfor %}
     </p>
     <p>
         {{ form.frame.label }}<br>
@@ -105,6 +135,12 @@
             <p class="alert alert-danger" role="alert">
                 {{ error }}
             </p>
+        {% endfor %}
+        {{ form.frame_price(class="form-control") }}<br>
+        {% for error in form.frame_price.errors %}
+        <p class="alert alert-danger" role="alert">
+            {{ error }}
+        </p>
         {% endfor %}
     </p>
     <p>
@@ -121,6 +157,12 @@
                 {{ error }}
             </p>
         {% endfor %}
+        {{ form.cooler_price(class="form-control") }}<br>
+        {% for error in form.cooler_price.errors %}
+        <p class="alert alert-danger" role="alert">
+            {{ error }}
+        </p>
+        {% endfor %}
     </p>
     <p>
         {{ form.power.label}}<br>
@@ -135,6 +177,12 @@
             <p class="alert alert-danger" role="alert">
                 {{ error }}
             </p>
+        {% endfor %}
+        {{ form.power_price(class="form-control") }}<br>
+        {% for error in form.power_price.errors %}
+        <p class="alert alert-danger" role="alert">
+            {{ error }}
+        </p>
         {% endfor %}
     </p>
     <p>

@@ -1,5 +1,7 @@
-from flask import Flask, url_for, request, render_template, redirect
+from flask import Flask, url_for, request, render_template, redirect, jsonify
 from data import db_session
+import configs_api
+import flask
 from flask_login import login_user, LoginManager, login_required, logout_user
 from forms.user import RegisterForm, LoginForm
 from data.users import User
@@ -16,6 +18,7 @@ login_manager.init_app(app)
 
 def main():
     db_session.global_init("db/data.sqlite3")
+    app.register_blueprint(configs_api.blueprint)
     app.run(port=8080, host='127.0.0.1')
 
 
@@ -32,34 +35,46 @@ def add_configuration():
     form = AddConfigurationForm()
     if form.validate_on_submit():
         db_sess = db_session.create_session()
+        summ =int(form.cooler_price.data) + int(form.ram_price.data) + int(form.cpu_price.data) + int(form.frame_price.data) + int(form.ssd_price.data) + int(form.power_price.data) + int(form.motherboard_price.data) + int(form.gpu_price.data)
         config = Configuration(
             name=form.name.data,
             
             cooler=form.cooler.data,
             cooler_link=form.cooler_link.data,
+            cooler_price=form.cooler_price.data,
             
             ram=form.ram.data,
             ram_link=form.ram_link.data,
+            ram_price=form.ram_price.data,
             
             cpu=form.cpu.data,
             cpu_link=form.cpu_link.data,
+            cpu_price=form.cpu_price.data,
             
             frame=form.frame.data,
             frame_link=form.frame_link.data,
+            frame_price=form.frame_price.data,
             
             ssd=form.ssd.data,
             ssd_link=form.ssd_link.data,
+            ssd_price=form.ssd_price.data,
+
 
             power=form.power.data,
             power_link=form.power_link.data,
+            power_price=form.power_price.data,
             
             motherboard=form.motherboard.data,
             motherboard_link=form.motherboard_link.data,
+            motherboard_price=form.motherboard_price.data,
             
             gpu=form.gpu.data,
             gpu_link=form.gpu_link.data,
+            gpu_price=form.gpu_price.data,
             
-            comment=form.comment.data
+            comment=form.comment.data,
+            
+            total_price=summ,
         )
         current_user.configurations.append(config)
         db_sess.merge(current_user)

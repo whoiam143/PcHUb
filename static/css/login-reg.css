@@ -157,10 +157,6 @@ header {
     }
 }
 
-.menu{
-    padding 5px 0;
-}
-
 .menu__list{
     display: flex;
     list-style-type: none;
