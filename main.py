@@ -8,17 +8,21 @@ from data.users import User
 from data.configurations import Configuration
 from forms.configuration import AddConfigurationForm
 from flask_login import LoginManager, current_user
+from flask_restful import reqparse, abort, Api, Resource
+from data import configs_api
 
 
 app = Flask(__name__)
 app.config['SECRET_KEY'] = 'pchub_secret_key'
+api = Api(app)
 login_manager = LoginManager()
 login_manager.init_app(app)
 
 
 def main():
+    api.add_resource(configs_api.ConfigurationList, '/api/') 
+    api.add_resource(configs_api.ConfigurationResourse, '/api/<int:config_id>')
     db_session.global_init("db/data.sqlite3")
-    app.register_blueprint(configs_api.blueprint)
     app.run(port=8080, host='127.0.0.1')
 
 
@@ -87,7 +91,6 @@ def add_configuration():
 def reqister():
     form = RegisterForm()
     if form.validate_on_submit():
-        print(123)
         if form.password.data != form.password_again.data:
             return render_template('register.html', title='Регистрация',
                                    form=form,

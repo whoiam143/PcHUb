@@ -33,8 +33,8 @@ class AddConfigurationForm(FlaskForm):
     frame_link = URLField('', render_kw={"placeholder": 'Ссылка на корпус'})
     frame_price = IntegerField('Цена', validators=[DataRequired()], render_kw={"placeholder": 'Цена', 'type': 'number'})
 
-    cooler = StringField('Кулер', validators=[DataRequired()], render_kw={"placeholder": 'Название куллера'})
-    cooler_link = URLField('', render_kw={"placeholder": 'Ссылка на куллеры'})
+    cooler = StringField('Кулер', validators=[DataRequired()], render_kw={"placeholder": 'Название кулера'})
+    cooler_link = URLField('', render_kw={"placeholder": 'Ссылка на кулеры'})
     cooler_price = IntegerField('Цена', validators=[DataRequired()], render_kw={"placeholder": 'Цена', 'type': 'number'})
 
     power = StringField('Блок питания', validators=[DataRequired()], render_kw={"placeholder": 'Название блока питания'})
