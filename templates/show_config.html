@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="https://fonts.googleapis.com/css?family=Montserrat:regular, 500,600,700,900" rel="stylesheet"/>
+        <link rel="stylesheet" href="../static/css/style.css">
+        <title>PcHub</title>
+    </head>
+    <body>
+        <div class="wrapper">
+            <header class="header">
+                <div class="header__container _container">
+                    <a href="" class="header__logo">
+                        PcHub
+                    </a>
+                    <nav class="header__menu menu">
+                        <ul class="menu__list">
+                                {% if current_user.is_authenticated %}
+                                <li class="menu__item" style="margin-left: 5rem;">
+                                    <a class="menu__link" href="">Профиль</a>
+                                </li>
+                                <li class="menu__item">
+                                    <a class="menu__link" href="/logout">Выход</a>
+                                </li>
+                                {% else %}
+                                <li class="menu__item" style="margin-left: 5rem;">
+                                    <a class="menu__link" href="/register">Зарегистрироваться</a>
+                                </li>
+                                <li class="menu__item">
+                                    <a class="menu__link" href="/login">Войти</a>
+                                </li>
+                                {% endif %}
+                            <li class="menu__item">
+                                <a href="#link" class="menu__link"><span>Конфигурации</span></a>
+                            </li>
+                            <li class="menu__item">
+                                <a href="" class="menu__link">Контакты</a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            </header>
+        </div>>
+    </body>
+</html>
