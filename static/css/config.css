@@ -1,0 +1,118 @@
+*,
+*::before,
+*::after {
+    padding: 0;
+    margin: 0;
+    border: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    font-family: "Montserrat", sans-serif;
+}
+
+a {
+    text-decoration: none;
+}
+
+.mainpage {
+    display: flex;
+    min-height: 100vh;
+    background: url("/static/img/phon.jpg") no-repeat;
+    background-size: cover;
+    background-position: center;
+    justify-content: center;
+
+}
+
+._container{
+    max-width: 1024px;
+    margin: 0px auto;
+    padding: 0px 25px;
+    box-sizing: content-box;
+
+}
+
+.header {
+    position: sticky;
+    width: 100%;
+    height: 92px;
+    background: cover;
+    left: 0;
+    top: 0;
+    z-index: 1003;
+}
+
+.header__container{
+    display: flex;
+    min-height: 92px;
+    align-items: center;
+}
+
+.header__menu{
+    margin: 0px 0px 0px 600px;
+}
+
+.header__logo{
+    font-size: 24px;
+    font-weight: 700;
+    color: purple;
+}
+
+table {
+  table-align: center;
+  border-collapse: collapse;
+  border: 2px solid rgb(200,200,200);
+  letter-spacing: 1px;
+  font-size: 0.8rem;
+  text-align: center;
+  font-size: 15 px;
+  margin-top: 150px;
+  width: 1000px;
+  height: 500px;
+  margin: 90px;
+
+}
+
+td, th {
+  border: 1px solid rgb(190,190,190);
+  padding: 10px 20px;
+}
+
+th {
+  background-color: rgb(235,235,235);
+}
+
+td {
+  text-align: center;
+  font-size: 15px;
+  font-weight: 600;
+}
+
+tr:nth-child(even) td {
+  background-color: rgb(250,250,250);
+}
+
+tr:nth-child(odd) td {
+  background-color: rgb(245,245,245);
+}
+
+main {
+    text-align: center;
+    table-align: center;
+}
+
+.cap {
+    font-size: 35px;
+    font-weight: 900;
+    color: white;
+    margin: 45px;
+}
+
+.naming{
+    width: 300px;
+}
+
+.koment {
+    color: white;
+    font-size: 20px;
+}
+

@@ -4,43 +4,71 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link href="https://fonts.googleapis.com/css?family=Montserrat:regular, 500,600,700,900" rel="stylesheet"/>
-        <link rel="stylesheet" href="../static/css/style.css">
+        <link rel="stylesheet" href="../static/css/config.css">
         <title>PcHub</title>
     </head>
     <body>
-        <div class="wrapper">
-            <header class="header">
-                <div class="header__container _container">
-                    <a href="" class="header__logo">
-                        PcHub
-                    </a>
-                    <nav class="header__menu menu">
-                        <ul class="menu__list">
-                                {% if current_user.is_authenticated %}
-                                <li class="menu__item" style="margin-left: 5rem;">
-                                    <a class="menu__link" href="">Профиль</a>
-                                </li>
-                                <li class="menu__item">
-                                    <a class="menu__link" href="/logout">Выход</a>
-                                </li>
-                                {% else %}
-                                <li class="menu__item" style="margin-left: 5rem;">
-                                    <a class="menu__link" href="/register">Зарегистрироваться</a>
-                                </li>
-                                <li class="menu__item">
-                                    <a class="menu__link" href="/login">Войти</a>
-                                </li>
-                                {% endif %}
-                            <li class="menu__item">
-                                <a href="#link" class="menu__link"><span>Конфигурации</span></a>
-                            </li>
-                            <li class="menu__item">
-                                <a href="" class="menu__link">Контакты</a>
-                            </li>
-                        </ul>
-                    </nav>
-                </div>
-            </header>
-        </div>>
+        <div class="mainpage">
+            <main>
+                <header>
+                    <h1 class="cap">Название сборки, добавлю сам</h1>
+                    <p class="koment">что-то о сборке, добавлю сам</p>
+                </header>
+                <table border="2">
+                    <tr>
+                        <td>Процессор</td>
+                        <td class="naming">...название</td>
+                        <td><a href="">Сслыка</a></td>
+                        <td>...цена</td>
+                    </tr>
+                    <tr>
+                        <td>Материнская плата</td>
+                        <td class="naming">...название</td>
+                        <td><a href="">Сслыка</a></td>
+                        <td>...цена</td>
+                    </tr>
+                    <tr>
+                        <td>Оперативная память</td>
+                        <td class="naming">...название</td>
+                        <td><a href="">Сслыка</a></td>
+                        <td>...цена</td>
+                    </tr>
+                    <tr>
+                        <td>Видеокарта</td>
+                        <td class="naming">...название</td>
+                        <td><a href="">Сслыка</a></td>
+                        <td>цена</td>
+                    </tr>
+                    <tr>
+                        <td>Накопитель</td>
+                        <td class="naming">...название</td>>
+                        <td><a href="">Сслыка</a></td>
+                        <td>...цена</td>
+                    </tr>
+                    <tr>
+                        <td>Охлаждение</td>
+                        <td class="naming">...название</td>
+                        <td><a href="">Сслыка</a></td>
+                        <td>цена</td>
+                    </tr>
+                    <tr>
+                        <td>Блок питания</td>
+                        <td class="naming">...название</td>
+                        <td><a href="">Сслыка</a></td>
+                        <td>...цена</td>
+                    </tr>
+                    <tr>
+                        <td>Корпус</td>
+                        <td class="naming">...название</td>
+                        <td><a href="">Сслыка</a></td>
+                        <td>...цена</td>
+                    </tr>
+                    <tr>
+                        <td colspan="3">Итого</td>
+                        <td>...Итоговая цена</td>
+                    </tr>
+                </table>
+            </main>
+        </div>
     </body>
 </html>
