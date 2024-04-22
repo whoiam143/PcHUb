@@ -54,7 +54,8 @@ a {
 .header__logo{
     font-size: 24px;
     font-weight: 700;
-    color: purple;
+    color: white;
+    padding-right: 894px;
 }
 
 table {
