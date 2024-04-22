@@ -11,62 +11,62 @@
         <div class="mainpage">
             <main>
                 <header>
-                    <h1 class="cap">Название сборки, добавлю сам</h1>
+                    <h1 class="cap">{{ config.name }}</h1>
                     <a href="/" class="header__logo"><- Назад</a>
                     <p class="koment">что-то о сборке, добавлю сам</p>
                 </header>
                 <table border="2">
                     <tr>
                         <td>Процессор</td>
-                        <td class="naming">...название</td>
-                        <td><a href="">Сслыка</a></td>
-                        <td>...цена</td>
+                        <td class="naming">{{ config.cpu }}</td>
+                        <td><a href="{{ config.cpu_link }}">Ссылка</a></td>
+                        <td>{{ config.cpu_price }}</td>
                     </tr>
                     <tr>
                         <td>Материнская плата</td>
-                        <td class="naming">...название</td>
-                        <td><a href="">Сслыка</a></td>
-                        <td>...цена</td>
+                        <td class="naming">{{ config.motherboard }}</td>
+                        <td><a href="{{ config.motherboard_link }}">Сслыка</a></td>
+                        <td>{{ config.motherboard_price }}</td>
                     </tr>
                     <tr>
                         <td>Оперативная память</td>
-                        <td class="naming">...название</td>
-                        <td><a href="">Сслыка</a></td>
-                        <td>...цена</td>
+                        <td class="naming">{{ config.ram }}</td>
+                        <td><a href="{{ config.ram_link }}">Сслыка</a></td>
+                        <td>{{ config.ram_price }}</td>
                     </tr>
                     <tr>
                         <td>Видеокарта</td>
-                        <td class="naming">...название</td>
-                        <td><a href="">Сслыка</a></td>
-                        <td>цена</td>
+                        <td class="naming">{{ config.gpu }}</td>
+                        <td><a href="{{ config.gpu_link }}">Сслыка</a></td>
+                        <td>{{ config.gpu_price}}</td>
                     </tr>
                     <tr>
                         <td>Накопитель</td>
-                        <td class="naming">...название</td>>
-                        <td><a href="">Сслыка</a></td>
-                        <td>...цена</td>
+                        <td class="naming">{{ config.ssd }}</td>>
+                        <td><a href="{{ config.ssd_link }}">Сслыка</a></td>
+                        <td>{{ config.ssd_price }}</td>
                     </tr>
                     <tr>
                         <td>Охлаждение</td>
-                        <td class="naming">...название</td>
-                        <td><a href="">Сслыка</a></td>
-                        <td>цена</td>
+                        <td class="naming">{{ config.cooler }}</td>
+                        <td><a href="{{ config.cooler_link }}">Сслыка</a></td>
+                        <td>{{ config.cooler_price}}</td>
                     </tr>
                     <tr>
                         <td>Блок питания</td>
-                        <td class="naming">...название</td>
-                        <td><a href="">Сслыка</a></td>
-                        <td>...цена</td>
+                        <td class="naming">{{ config.power }}</td>
+                        <td><a href="{{ config.power_link }}">Сслыка</a></td>
+                        <td>{{ config.power_price }}</td>
                     </tr>
                     <tr>
                         <td>Корпус</td>
-                        <td class="naming">...название</td>
-                        <td><a href="">Сслыка</a></td>
-                        <td>...цена</td>
+                        <td class="naming">{{ config.frame }}</td>
+                        <td><a href="{{ config.frame_link }}">Сслыка</a></td>
+                        <td>{{ config.frame_price }}</td>
                     </tr>
                     <tr>
                         <td colspan="3">Итого</td>
-                        <td>...Итоговая цена</td>
+                        <td>{{ config.total_price }}</td>
                     </tr>
                 </table>
             </main>

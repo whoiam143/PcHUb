@@ -509,8 +509,8 @@ ul.menu__list li {
 .product {
   display: flex;
   flex-direction: column;
-  max-width: 500px;
-  max-height: 500px;
+  width: 500px;
+  height: 500px;
 
 }
 

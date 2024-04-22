@@ -133,9 +133,11 @@ def logout():
     return redirect("/")
 
 
-@app.route('/show')
-def show():
-    return render_template('show_config.html')
+@app.route('/show/<id>')
+def show(id):
+    db_sess = db_session.create_session()
+    config = db_sess.query(Configuration).get(id)
+    return render_template('show_config.html', config=config)
 
 
 @login_manager.user_loader
