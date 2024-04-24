@@ -83,7 +83,7 @@ def add_configuration():
         current_user.configurations.append(config)
         db_sess.merge(current_user)
         db_sess.commit()
-        return redirect('/')
+        return redirect('/profile')
     return render_template('add_configuration.html', title='Добавление кофигурации', form=form)
 
 
