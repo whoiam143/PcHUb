@@ -27,20 +27,60 @@
                 <div class="configs">
                     <div class="catalog">
                             <div class="catalog__item">
-                                <a class="btn product__btn" href="">Сборка №1</a>
-                                <a class="btn product__btn" href="">Сборка №2</a>
-                                <a class="btn product__btn" href="">Сборка №3</a>
-                                <a class="btn product__btn" href="">Сборка №4</a>
-                                <a class="btn product__btn" href="">Сборка №5</a>
+                                {% if configs[0]%}
+                                    <a class="btn product__btn" href="/show/{{ configs[0].id }}">{{ configs[0].name }}</a>
+                                {% else %}
+                                    <a class="btn product__btn" href="/add_configuration">Сборка №1</a>
+                                {% endif %}
+                                {% if configs[1]%}
+                                    <a class="btn product__btn" href="/show/{{ configs[1].id }}">{{ configs[1].name }}</a>
+                                {% else %}
+                                    <a class="btn product__btn" href="/add_configuration">Сборка №2</a>
+                                {% endif %}
+                                {% if configs[2]%}
+                                    <a class="btn product__btn" href="/show/{{ configs[2].id }}">{{ configs[2].name }}</a>
+                                {% else %}
+                                    <a class="btn product__btn" href="/add_configuration">Сборка №3</a>
+                                {% endif %}
+                                {% if configs[3]%}
+                                    <a class="btn product__btn" href="/show/{{ configs[3].id }}">{{ configs[3].name }}</a>
+                                {% else %}
+                                    <a class="btn product__btn" href="/add_configuration">Сборка №4</a>
+                                {% endif %}
+                                {% if configs[4]%}
+                                    <a class="btn product__btn" href="/show/{{ configs[4].id }}">{{ configs[4].name }}</a>
+                                {% else %}
+                                    <a class="btn product__btn" href="/add_configuration">Сборка №5</a>
+                                {% endif %}
                             </div>
                     </div>
                     <div class="catalog">
                             <div class="catalog__item">
-                                <a class="btn product__btn" href="">Сборка №6</a>
-                                <a class="btn product__btn" href="">Сборка №7</a>
-                                <a class="btn product__btn" href="">Сборка №8</a>
-                                <a class="btn product__btn" href="">Сборка №9</a>
-                                <a class="btn product__btn" href="">Сборка №10</a>
+                                {% if configs[5] %}
+                                    <a class="btn product__btn" href="/show/{{ configs[5].id }}">{{ configs[5].name }}</a>
+                                {% else %}
+                                    <a class="btn product__btn" href="/add_configuration">Сборка №6</a>
+                                {% endif %}
+                                {% if configs[6]%}
+                                    <a class="btn product__btn" href="/show/{{ configs[6].id }}">{{ configs[6].name }}</a>
+                                {% else %}
+                                    <a class="btn product__btn" href="/add_configuration">Сборка №7</a>
+                                {% endif %}
+                                {% if configs[7]%}
+                                    <a class="btn product__btn" href="/show/{{ configs[7].id }}">{{ configs[7].name }}</a>
+                                {% else %}
+                                    <a class="btn product__btn" href="/add_configuration">Сборка №8</a>
+                                {% endif %}
+                                {% if configs[8]%}
+                                    <a class="btn product__btn" href="/show/{{ configs[8].id }}">{{ configs[8].name }}</a>
+                                {% else %}
+                                    <a class="btn product__btn" href="/add_configuration">Сборка №9</a>
+                                {% endif %}
+                                {% if configs[9]%}
+                                    <a class="btn product__btn" href="/show/{{ configs[9].id }}">{{ configs[9].name }}</a>
+                                {% else %}
+                                    <a class="btn product__btn" href="/add_configuration">Сборка №10</a>
+                                {% endif %}
                             </div>
                     </div>
                 </div>
