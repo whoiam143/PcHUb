@@ -146,5 +146,10 @@ def load_user(user_id):
     return db_sess.query(User).get(user_id)
 
 
+@app.route('/profile')
+def show_profile():
+    return render_template('profile.html')
+
+
 if __name__ == "__main__":
     main()
