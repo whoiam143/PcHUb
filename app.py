@@ -150,7 +150,6 @@ def load_user(user_id):
 def show_profile():
     db_sess = db_session.create_session()
     configs = db_sess.query(Configuration).filter(Configuration.user == current_user).all()
-    print(123424123412341234)
     return render_template('profile.html', configs=configs)
 
 

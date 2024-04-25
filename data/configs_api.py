@@ -109,11 +109,3 @@ class ConfigurationResourse(Resource):
                 'config': config.all()
             }
         )
-    
-    def delete(self, config_id):
-        abort_if_config_not_found(config_id)
-        session = db_session.create_session()
-        config = session.query(Configuration).get(config_id)
-        session.delete(config)
-        session.commit()
-        return 204
