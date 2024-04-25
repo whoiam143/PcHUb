@@ -23,7 +23,7 @@ def main():
     api.add_resource(configs_api.ConfigurationList, '/api/') 
     api.add_resource(configs_api.ConfigurationResourse, '/api/<int:config_id>')
     db_session.global_init("db/data.sqlite3")
-    app.run(port=8080, host='127.0.0.1')
+    app.run(port=8080, host='0.0.0.0')
 
 
 @app.route('/')
